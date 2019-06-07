@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+  <h1>Posts</h1>
+  {{ range .Paginator.Pages }}
+  <ul class="list">
+      <li>
+          <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong> - Posted {{ .Date.Format "2006-01-02" }}
+          <br>
+        <div class="tags">
+            <ul class="tags">
+            <strong>Tags:</strong> 
+            {{ range .Params.tags }}
+            <li class="tags"><a class="tags" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+            </ul>
+        </div> 
+      </li>
+  </ul>
+ {{ end }}
+  <div class="pagination">
+      {{ template "_internal/pagination.html" . }}
+  </div>
+{{ partial "footer.html" . }}

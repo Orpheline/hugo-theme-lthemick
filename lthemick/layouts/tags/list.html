@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+  <h1>Tags</h1>
+  {{ range .Data.Pages }}
+  <ul class="list">
+      <li><strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong> - {{ .Date.Format "2006-01-02" }}</li>
+      <p> {{ .Summary }}</p>
+  </ul>
+  {{ end }}
+{{ partial "footer.html" . }}

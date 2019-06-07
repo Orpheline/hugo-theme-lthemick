@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "css/main.css" |absURL }}"/>
+  <link rel="stylesheet" href="{{ "css/syntax.css" |absURL }}"/>
+  <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}"/>
+</head>
+<body>
+    <div class="header">
+        <h1 class="header"><a class="header" href="{{ "index.html" |absURL }}">{{ .Site.Title }}</a></h1>
+        {{ partial "nav.html" . }}
+    </div>

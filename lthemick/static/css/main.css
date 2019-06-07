@@ -1,0 +1,143 @@
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 1.10em;
+  color: #566b78;
+  margin: 0 auto;
+  max-width: 45em;
+  line-height: 1.5;
+  padding: 1em 1em;
+}
+
+pre {
+    padding: 5px 5px;
+    border-left: 4px solid #086A87;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #086A87;
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkred;
+    font-weight: bold;
+}
+
+code {
+    color: #086A87;
+    background-color: #eeeedd;
+    padding: 3px;
+    font-size: 1.25em;
+}
+
+h1,
+h2 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  color: #086A87;
+}
+
+.footer {
+    background-color: #086A87;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float:right;
+}
+
+.tags {
+    display: inline;
+    color:darkred;
+}
+
+/* Header styles */
+.header {
+    background-color: #086A87;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 0px 5px 0px 5px;
+}
+
+a.header:link,
+a.header:visited,
+a.header:hover,
+a.header:active {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Tag styles */
+div.tags {
+    display: block-inline;
+    padding: 5px 2px 5px 2px;
+}
+
+a.tags:link,
+a.tags:visited,
+a.tags:active {
+    color: #086A87;
+    font-weight: normal;
+    font-size: 0.90em;
+}
+a.tags:hover {
+    color: darkred;
+    font-weight: normal;
+    font-size: 0.90em;
+}
+
+ul.tags {
+    display: block-inline;
+    padding: 1em;
+}
+li.tags {
+    display: block-inline;
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 7px;
+    border: 1px solid #086A87;
+}
+
+/* Pagination */
+ul.pagination {
+    display: inline;
+    list-style-type: none;
+    text-align: left;
+}
+li.page-item {
+    display: block;
+    float:left;
+    padding: 0px 5px 1px 5px;
+}
+
+/* Navigation menu */
+.nav {
+    display: block;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.nav a.nav {
+    float: right;
+    padding: 0px 5px 1px 5px;
+}

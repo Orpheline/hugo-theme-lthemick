@@ -1,0 +1,21 @@
+  <!DOCTYPE html> 
+  {{ partial "header.html" . }}
+    {{ range .Paginator.Pages }}
+      {{ if eq .Type "post" }}
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <strong>{{ .Date.Format "2006-01-02" }}</strong>
+        <p> {{ .Summary }}</p>
+        <div class="tags">
+            <ul class="tags">
+            <strong>Tags:</strong> 
+            {{ range .Params.tags }}
+            <li class="tags"><a class="tags" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+            </ul>
+        </div> 
+      {{ end }}
+    {{ end }}
+    <div class="pagination">
+        {{ template "_internal/pagination.html" . }}
+    </div>
+  {{ partial "footer.html" . }}

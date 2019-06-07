@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{{ partial "header.html" . }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Date.Format "2006-01-02" }} </p>
+  {{ .Content }}
+  <hr>
+  <div class="tags">
+      <ul class="tags">
+      <strong>Tags:</strong> 
+      {{ range .Params.tags }}
+      <li class="tags"><a class="tags" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></li>
+      {{ end }}
+      </ul>
+  </div> 
+{{ partial "footer.html" . }}
+

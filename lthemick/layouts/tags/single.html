@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{{ partial "header.html" . }}
+<h1>Tags</h1>
+<div class="tags">
+    <ul>{{ range .Data.Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Date.Format "Mon, Jan 2, 2006" }}</li>
+    {{ end }}</ul>
+
+    Tags: 
+    {{ range .Params.tags }}
+        {{ . }}
+    {{ end }}
+
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <span class="tag"><a href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+    {{ end }}
+</div> 
+  {{ .Content }}
+{{ partial "footer.html" . }}
+

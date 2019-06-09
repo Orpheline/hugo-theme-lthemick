@@ -1,16 +1,18 @@
 body {
   font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 1.10em;
+  font-size: 150%;
   color: #566b78;
   margin: 0 auto;
   max-width: 45em;
   line-height: 1.5;
   padding: 1em 1em;
 }
+@media(min-width:700px){body{font-size: 110%}}
 
 pre {
     padding: 5px 5px;
     border-left: 4px solid #086A87;
+    background-color: #eeeedd;
 }
 
 a {
